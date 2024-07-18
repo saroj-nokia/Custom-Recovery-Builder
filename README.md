@@ -8,8 +8,11 @@ Compile your first custom recovery via Github Actions - with ldcheck setup. This
  * Manifest Branch (*12.1, *11.0, etc.)
  * Device Tree (Your device tree repository link)
  * Device Tree Branch (Your device tree repository branch)
- * Device Name (Your device codename)
  * Device Path (device/brand/codename)
+ * Kernel Tree (Your device tree repository link) (optional)
+ * Kernel Tree Branch (Your kernel tree repository branch) (optional)
+ * Kernel Path (kernel/brand/codename) (optional)
+ * Device Name (Your device codename)
  * Build Target (boot, reecovery, vendorboot)
  * LDCHECK (path to your target binary file, ie. `system/bin/qseecomd`)
    - If you are building manually/locally and you want to use ldcheck for checking dependencies, visit [THIS](https://github.com/TeamWin/android_device_qcom_twrp-common/tree/android-11#using-ldcheck-to-find-dependencies) this for guide.
