@@ -26,15 +26,15 @@ on:
         default: 'device/xiaomi/rosy'
       KERNEL_TREE:
         description: 'Custom Kernel Tree For Recovery' # Your already have kernel Tree for TWRP
-        required: true
+        required: false
         default: 'https://github.com/saroj-nokia/android_kernel_xiaomi_rosy.git'
       kernel_TREE_BRANCH:
         description: 'Custom Kernel Tree Branch' # Your Kernel Tree Branch, make sure it's right.
-        required: true
+        required: false
         default: 'lineage-20.0'
       KERNEL_PATH:
         description: 'Specify your Kernel Path' # As is, just like your KERNEL_PATH.
-        required: true
+        required: false
         default: 'kernel/xiaomi/rosy'
       DEVICE_NAME:
         description: 'Specify your Device Codename' # As is, just like your PRODUCT_DEVICE in your device tree.
@@ -74,6 +74,9 @@ jobs:
         echo "Device Tree: ${{ github.event.inputs.DEVICE_TREE }}"
         echo "Device Branch: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}"
         echo "Device Path: ${{ github.event.inputs.DEVICE_PATH }}"
+        echo "Kernel Tree: ${{ github.event.inputs.KERNEL_TREE }}"
+        echo "Kernel Branch: ${{ github.event.inputs.KERNEL_TREE_BRANCH }}"
+        echo "Kernel Path: ${{ github.event.inputs.KERNEL_PATH }}"
         echo "Device Name: ${{ github.event.inputs.DEVICE_NAME }}"
         echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}image"
 
