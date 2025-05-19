@@ -44,7 +44,7 @@ on:
 jobs:
   build:
     name: Build TWRP by ${{ github.actor }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -151,7 +151,7 @@ jobs:
       run: |
         echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
       
-    - name: Upload to Release (boot and becovery)
+    - name: Upload to Release (boot and recovery)
       if: github.event.inputs.BUILD_TARGET == 'boot' || github.event.inputs.BUILD_TARGET == 'recovery'
       uses: softprops/action-gh-release@v2
       with:
