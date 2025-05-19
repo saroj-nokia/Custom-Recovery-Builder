@@ -1,4 +1,4 @@
-name: Recovery Builder - TWRP
+name: Recovery Builder - TWRP(for-prebuild-kernel)
 
 on:
   workflow_dispatch:
